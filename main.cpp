@@ -24,10 +24,21 @@ using std::endl;
 #include <math.h>
 
 //#include <GL/gl.h>
-#include <GLUT/glut.h>
+//#include <GLUT/glut.h>
 //#include <GLUT/freeglut.h>
 #include <math.h>
 //#include <GLUI/GLUI.h>
+
+/* Mac OS X */
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#endif
+
+/* Linux */
+#ifdef linux
+#include <gl/glut.h>
+#endif
+
 
 #define x_fSize 200 //field size
 #define y_fSize 200
